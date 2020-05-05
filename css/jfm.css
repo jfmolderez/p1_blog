@@ -1,0 +1,11 @@
+.jfm {
+    background-color: var(--color-grey-dark-3);
+    grid-column: center-start / col-end 2;
+}
+
+@media (max-width: 700px) {
+    .jfm {
+        grid-column: full-start / full-end ;
+    }
+}
+

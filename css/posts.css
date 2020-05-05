@@ -1,0 +1,29 @@
+.posts {
+    background-color: var(--color-grey-light-1);
+    grid-column: center-start / center-end;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);  
+    /* implicit rows */
+    grid-gap: 6rem;
+}
+
+.quote__translation {
+    font-size: 1.6rem;
+
+}
+
+@media (max-width: 1000px) {
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}  
+
+@media (max-width: 700px) {
+    .posts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}  

@@ -1,0 +1,73 @@
+:root {
+    --color-primary: #2f64eb;
+    --color-primary-light: #3366ff;
+    --color-primary-dark: #265dba;
+
+    --color-secondary-light: floralwhite;
+    --color-secondary: #c69963;
+    --color-secondary-dark: #b28451;   
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-0: #211;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #bbb;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+
+    --font-primary: 'Nunito', sans-serif;
+    --font-display: 'Josefin Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-2);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: minmax(min-content, 5vh) repeat(2, min-content) minmax(min-content, 5vh); 
+    grid-template-columns: [sidebar-start] 16rem [sidebar-end full-start] minmax(2rem, 1fr) [center-start] 
+    repeat(3, [col-start] minmax(min-content, 38rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+}
+
+.container > * {
+    padding: 20px;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 875px) {
+
+    .container {
+        grid-template-rows: minmax(min-content, 5vh) minmax(min-content,5vh) repeat(2, min-content) minmax(min-content, 5vh);
+        grid-template-columns: [full-start center-start] 
+        repeat(3, [col-start] minmax(min-content, 38rem) [col-end]) [center-end full-end];
+    }
+}
+
+

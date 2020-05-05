@@ -1,0 +1,23 @@
+.header {
+    background-color: var(--color-grey-dark-1);
+    grid-column: full-start / full-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    max-height: 2.7rem;
+    max-width: 100%;
+}
+
+.header .text {
+    font-size: 1.1rem;
+    transform: skewX(-10deg);
+}
+
+.header .author {
+    max-height: 2.7rem;
+    max-width: 100%;
+    border-radius: 50%;
+}
